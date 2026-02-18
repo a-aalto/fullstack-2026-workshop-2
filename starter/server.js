@@ -54,7 +54,7 @@ const server = http.createServer((req, res) => {
             filePath = path.join(PUBLIC_DIR, '/about.html');
         }
         else if (req.url === '/contact') {
-            filepath = path.join(PUBLIC_DIR, '/contact.html');
+            filePath = path.join(PUBLIC_DIR, '/contact.html');
         }
         
         // TODO: Add 'else if' for '/contact' -> 'contact.html'
