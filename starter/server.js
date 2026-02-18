@@ -50,7 +50,12 @@ const server = http.createServer((req, res) => {
         } 
         // TODO: Add 'else if' for '/about' -> 'about.html'
         // Example: else if (req.url === '/about') { filePath = path.join(PUBLIC_DIR, 'about.html'); }
-        
+        else if (req.url === '/about') {
+            filePath = path.join(PUBLIC_DIR, '/about.html');
+        }
+        else if (req.url === '/contact') {
+            filepath = path.join(PUBLIC_DIR, '/contact.html');
+        }
         
         // TODO: Add 'else if' for '/contact' -> 'contact.html'
         
@@ -171,6 +176,7 @@ function handleServerError(res, error) {
 server.listen(PORT, () => {
     // TODO: Log a message to indicate the server is running
     // Example: console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
     
     
     // Bonus: You can also log the available routes for better user experience
